@@ -1,3 +1,12 @@
+/*
+ * :file description:
+ * :name: /digital/config/config.default.js
+ * :author: 张德志
+ * :copyright: (c) 2023, Tungee
+ * :date created: 2023-06-06 19:35:14
+ * :last editor: 张德志
+ * :date last edited: 2023-06-06 20:12:11
+ */
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
@@ -17,6 +26,20 @@ module.exports = appInfo => {
 
   // add your middleware config here
   config.middleware = [];
+
+  config.view = {
+    mapping: { '.html': 'ejs' },
+  };
+
+
+  // 配置线上地址
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 8088,
+      hostname: '0.0.0.0',
+    },
+  };
 
   // add your user config here
   const userConfig = {
