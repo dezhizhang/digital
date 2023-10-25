@@ -5,7 +5,7 @@
  * :copyright: (c) 2023, Tungee
  * :date created: 2023-06-06 19:35:14
  * :last editor: 张德志
- * :date last edited: 2023-06-10 21:21:46
+ * :date last edited: 2023-10-25 19:19:20
  */
 'use strict';
 
@@ -16,4 +16,6 @@ module.exports = app => {
   const { router, controller } = app;
   router.get('/', controller.home.index);
   router.get('/car', controller.car.index);
+
+  router.get('/smart-city', controller.smartcity.home);
 };
